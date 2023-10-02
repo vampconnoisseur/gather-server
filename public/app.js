@@ -34,6 +34,10 @@ const generateRTCToken = (req, resp) => {
 
 app.get('/rtc/:channel/:uid', generateRTCToken);
 
+app.get('/', function (req, res) {
+    console.log("Render Working")
+});
+
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
 });
